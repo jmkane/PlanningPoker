@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="left">
+    <h1 style="color:white;">
+     Login
+    </h1>
+    <div>
+      <label>Name: </label>
+      <input [(ngModel)]="player.name" placeholder="Name"/>
+      <br />
+    </div>
+    <div>
+      <label>Password: </label>
+      <input [(ngModel)]="player.password" placeholder="Password"/>
+    </div>
+    <button (click)="onLoginSubmit()">Submit</button>
+    <button (click)="onLogintCancel()">Cancel</button>
+    <button (click)="onLogint4GotPWord()">Forgot Password</button>
+
+  </div>
+  <div class="right">
+    <h1 style="color:white;">
+     Register
+    </h1>
+    <div>
+      <label>Name: </label>
+      <input [(ngModel)]="player.name" placeholder="Name"/>
+      <br />
+      <label>Password: </label>
+      <input [(ngModel)]="player.password" placeholder="Password"/>
+      <br />
+      <label>State: </label>
+      <input [(ngModel)]="player.state" placeholder="State"/>
+      <br />
+      <label>Country: </label>
+      <input [(ngModel)]="player.country" placeholder="Country"/>
+      <br />
+      <label>Company: </label>
+      <input [(ngModel)]="player.company" placeholder="Company"/>
+      <br />
+      <label>Location: </label>
+      <input [(ngModel)]="player.location" placeholder="Location"/>
+      <br />
+    </div>
+    <button (click)="onRegisterUpdate()">Save</button>
+    <button (click)="onRegisterCancel()">Cancel</button>
+
+  </div>
+</div>
+
