@@ -1,0 +1,16 @@
+.container {
+  height: 100vh;
+  width: 150vw;
+  margin: 0;
+  padding: 0;
+}
+.left{
+  height:25%;
+   width:15%;
+   background-color: lightblue;
+}
+.right{
+  height:30%;
+  width:15%;
+  background-color: gold;
+}
