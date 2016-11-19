@@ -13,8 +13,8 @@
       <input [(ngModel)]="player.password" placeholder="Password"/>
     </div>
     <button (click)="onLoginSubmit()">Submit</button>
-    <button (click)="onLogintCancel()">Cancel</button>
-    <button (click)="onLogint4GotPWord()">Forgot Password</button>
+    <button (click)="onCancel()">Cancel</button>
+    <button (click)="onLogin4GotPWord()">Forgot Password</button>
 
   </div>
   <div class="right">
@@ -42,7 +42,7 @@
       <br />
     </div>
     <button (click)="onRegisterUpdate()">Save</button>
-    <button (click)="onRegisterCancel()">Cancel</button>
+    <button (click)="onCancel()">Cancel</button>
 
   </div>
 </div>
