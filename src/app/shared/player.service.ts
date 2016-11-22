@@ -1,29 +1,23 @@
 import {Injectable} from '@angular/core';
-import { Http } from '@angular/http';
+const MongoClient = require('mongodb').MongoClient;
 import 'rxjs/add/operator/toPromise';
 
 import Player from './player';
 
-const PLAYER_URL = 'https://helio-restaurants.mod.bz/v1/restaurants';
 
 @Injectable()
 export default class PlayerService {
 
   player: any;
 
-
-  constructor(public http: Http) {
-
-  }
-
-  getPlayer(): Promise<any[]> {
-    return this.http.get(PLAYER_URL)
-      .toPromise()
-      .then(response => {
-        return response.json()
-        // .map(restaurant => new any(restaurant._id, restaurant.addressBuilding))
-      });
-  }
+  getPlayer(player): Promise<any[]> {
+    return MongoClient.then(db => {
+      const query = {player};
+      return db.collection('player')
+        .find(query)
+        .toArray();
+    });
+  };
 
   updatePlayer(player, _id): Promise<any> {
 
@@ -35,19 +29,26 @@ export default class PlayerService {
     if(copyPlayer._id) {
       delete copyPlayer._id;
     }
-
-    return this.http.put(PLAYER_URL + '/' + _id, copyPlayer)
+    return MongoClient.then(db => {
+      const collection = db.collection('player');
+      return collection.findOneAndUpdate
+    ( {copyPlayer})
       .toPromise()
       .then(response => {
         return response.json()
       })
-  }
+  },
+ };
 
   addPlayer(player: Player) {
-    return this.http.post(PLAYER_URL, JSON.parse(JSON.stringify(player)))
+      return MongoClient.then(db => {
+        const collection = db.collection('player');
+        return collection.insertOne( JSON.parse(JSON.stringify(player)))
       .toPromise()
       .then(response => {
         return response.json()
       })
-  }
+  },
+};
+
 }

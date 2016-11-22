@@ -1,4 +1,4 @@
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URI = process.env.MONGO_URI;
+const PLAYER_URI = "./environments/MONGO_URI";
 
-module.exports = MongoClient.connect(MONGO_URI);
+module.exports = MongoClient.connect(PLAYER_URI);
