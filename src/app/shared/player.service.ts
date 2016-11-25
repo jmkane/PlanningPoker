@@ -1,11 +1,8 @@
-import {Injectable} from '@angular/core';
 const MongoClient = require('mongodb').MongoClient;
 import 'rxjs/add/operator/toPromise';
 
 import Player from './player';
 
-
-@Injectable()
 export default class PlayerService {
 
   player: any;
