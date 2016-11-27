@@ -22,12 +22,10 @@ export class LoginComponent implements OnInit {
 
     onRegisterUpdate(player:Player)
     {
-      return this.playerService.addPlayer(JSON.parse(JSON.stringify(player)))
-        .toPromise()
-        .then(response => {
-          return response.json()
-        })
-    }
+      return this.playerService.ADD(JSON.parse(JSON.stringify(player)))
+
+        }
+
 
     onCancel():void {
       this.player = null;
@@ -35,11 +33,11 @@ export class LoginComponent implements OnInit {
 
     onLoginSubmit(player: any):void {
       this.selectedPlayer = player;
-      this.playerService.getPlayer(player);
+      this.playerService.GET(player);
      }
 
     onLogin4GotPWord(player):void {
-      this.playerService.updatePlayer(this.player, this.player._id)
+      this.playerService.UPDATE(this.player, this.player._id)
       .then(() => this.player = null);
     }
 }
