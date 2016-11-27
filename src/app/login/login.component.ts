@@ -23,9 +23,7 @@ export class LoginComponent implements OnInit {
     onRegisterUpdate(player:Player)
     {
       return this.playerService.ADD(JSON.parse(JSON.stringify(player)))
-
-        }
-
+    }
 
     onCancel():void {
       this.player = null;
@@ -33,8 +31,8 @@ export class LoginComponent implements OnInit {
 
     onLoginSubmit(player: any):void {
       this.selectedPlayer = player;
-      this.playerService.GET(player);
-     }
+      return this.playerService.GET(player);
+    }
 
     onLogin4GotPWord(player):void {
       this.playerService.UPDATE(this.player, this.player._id)
