@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
     onRegisterUpdate(player:Player)
     {
-      return this.http.post(PLAYER_URL, JSON.parse(JSON.stringify(player)))
+      return this.playerService.addPlayer(JSON.parse(JSON.stringify(player)))
         .toPromise()
         .then(response => {
           return response.json()
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
 
     onLoginSubmit(player: any):void {
       this.selectedPlayer = player;
+      this.playerService.getPlayer(player);
      }
 
     onLogin4GotPWord(player):void {
