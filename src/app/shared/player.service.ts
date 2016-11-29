@@ -9,13 +9,33 @@ export default class PlayerService {
 
   player: Player;
 
-  GET(player) {
-  };
+  addPlayer(player) {
+    return new Promise((resolve, reject) => {
+      return resolve(player);
+    });
+  }
 
-  UPDATE(player, _id) {
-  };
+  getPlayer(player) {
+    return new Promise((resolve, reject) => {
+      return resolve(player);
+    });
+  }
 
-  ADD(player: Player) {
-  };
+  updatePlayer(player, id) {
+    return new Promise((resolve, reject) => {
+      return resolve(player);
+    });
+  }
+
+
+  //
+  // GET(player) {
+  // };
+  //
+  // UPDATE(player, _id) {
+  // };
+  //
+  // ADD(player: Player) {
+  // };
 
 }

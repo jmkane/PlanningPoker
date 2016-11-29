@@ -23,9 +23,8 @@ export class LoginComponent implements OnInit {
     onRegisterUpdate(player:Player)
     {
       return this.playerService.addPlayer(JSON.parse(JSON.stringify(player)))
-        .toPromise()
         .then(response => {
-          return response.json()
+          // return response.json()
         })
     }
 
