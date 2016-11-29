@@ -1,5 +1,3 @@
-// import {MongoClient} from 'mongo ';
-//
 // const MongoClient = require('mongodb').MongoClient;
 // const PLAYER_URI = "./environments/MONGO_URI";
 //

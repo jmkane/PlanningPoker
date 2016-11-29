@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
- MONGO_URI: 'http://localhost:27017/Poker'
+  MONGO_URI: 'http://localhost:27017/Poker'
 };
