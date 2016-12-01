@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  width: 150vw;
+  margin: 0;
+  padding: 0;
+  background-color: darkgreen;
+}
+
+.top{
+  height:25%;
+  width:100%;
+  background-color: white;
+}
+
+.bottom{
+  height:15%;
+  width:15%;
+  background-color: orange;
+}

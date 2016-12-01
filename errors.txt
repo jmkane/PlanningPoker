@@ -1,0 +1,171 @@
+ERROR in ./src/main.ts
+Module build failed: Error: ENOENT: no such file or directory, open 'C:\Users\jkane\Documents\GitHub\PlanningPoker\src\main.ts'
+    at Error (native)
+ @ multi main
+
+ERROR in ./~/css-loader!./~/postcss-loader!./src/styles.css
+Module build failed: Error: ENOENT: no such file or directory, open 'C:\Users\jkane\Documents\GitHub\PlanningPoker\src\styles.css'
+    at Error (native)
+ @ ./src/styles.css 4:14-119
+ @ multi styles
+
+ERROR in   Error: Child compilation failed:
+  Module build failed: Error: ENOENT: no such file or directory, open 'C:\Users\jkane\Documents\GitHub\PlanningPoker\src  \index.html'
+
+
+  - Error: ENOENT: no such file or directory, open 'C:\Users\jkane\Documents\GitHub\PlanningPoker\src\index.html'
+
+  - compiler.js:76
+    [PlanningPoker]/[html-webpack-plugin]/lib/compiler.js:76:16
+
+  - Compiler.js:279 Compiler.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compiler.js:279:10
+
+  - Compiler.js:474
+    [PlanningPoker]/[webpack]/lib/Compiler.js:474:13
+
+  - Tapable.js:81 next
+    [PlanningPoker]/[tapable]/lib/Tapable.js:81:11
+
+  - instance.ts:399 Compiler.<anonymous>
+    [PlanningPoker]/[awesome-typescript-loader]/src/instance.ts:399:13
+
+  - Tapable.js:83 next
+    [PlanningPoker]/[tapable]/lib/Tapable.js:83:14
+
+  - CachePlugin.js:61 Compiler.<anonymous>
+    [PlanningPoker]/[webpack]/lib/CachePlugin.js:61:4
+
+  - Tapable.js:85 Compiler.applyPluginsAsync
+    [PlanningPoker]/[tapable]/lib/Tapable.js:85:13
+
+  - Compiler.js:471 Compiler.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compiler.js:471:10
+
+  - Tapable.js:73 Compilation.applyPluginsAsync
+    [PlanningPoker]/[tapable]/lib/Tapable.js:73:70
+
+  - Compilation.js:626 Compilation.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compilation.js:626:18
+
+  - Tapable.js:73 Compilation.applyPluginsAsync
+    [PlanningPoker]/[tapable]/lib/Tapable.js:73:70
+
+  - Compilation.js:617 Compilation.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compilation.js:617:10
+
+  - Tapable.js:73 Compilation.applyPluginsAsync
+    [PlanningPoker]/[tapable]/lib/Tapable.js:73:70
+
+  - Compilation.js:612 Compilation.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compilation.js:612:9
+
+  - Tapable.js:73 Compilation.applyPluginsAsync
+    [PlanningPoker]/[tapable]/lib/Tapable.js:73:70
+
+  - Compilation.js:608 Compilation.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compilation.js:608:8
+
+  - Tapable.js:73 Compilation.applyPluginsAsync
+    [PlanningPoker]/[tapable]/lib/Tapable.js:73:70
+
+  - Compilation.js:554 Compilation.seal
+    [PlanningPoker]/[webpack]/lib/Compilation.js:554:7
+
+  - Compiler.js:468 Compiler.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compiler.js:468:16
+
+  - Tapable.js:152
+    [PlanningPoker]/[tapable]/lib/Tapable.js:152:11
+
+  - Compilation.js:452 Compilation.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compilation.js:452:10
+
+  - Compilation.js:423
+    [PlanningPoker]/[webpack]/lib/Compilation.js:423:12
+
+  - Compilation.js:335
+    [PlanningPoker]/[webpack]/lib/Compilation.js:335:10
+
+  - async.js:52
+    [PlanningPoker]/[webpack]/[async]/lib/async.js:52:16
+
+  - async.js:236 Object.async.forEachOf.async.eachOf
+    [PlanningPoker]/[webpack]/[async]/lib/async.js:236:30
+
+  - async.js:209 Object.async.forEach.async.each
+    [PlanningPoker]/[webpack]/[async]/lib/async.js:209:22
+
+  - Compilation.js:192 Compilation.addModuleDependencies
+    [PlanningPoker]/[webpack]/lib/Compilation.js:192:8
+
+  - Compilation.js:177 Compilation.processModuleDependencies
+    [PlanningPoker]/[webpack]/lib/Compilation.js:177:7
+
+  - Compilation.js:418 Compilation.moduleReady
+    [PlanningPoker]/[webpack]/lib/Compilation.js:418:9
+
+  - Compilation.js:414 Compilation.<anonymous>
+    [PlanningPoker]/[webpack]/lib/Compilation.js:414:16
+
+  - Compilation.js:124
+    [PlanningPoker]/[webpack]/lib/Compilation.js:124:4
+
+  - Array.forEach
+
+  - Compilation.js:123 callback
+    [PlanningPoker]/[webpack]/lib/Compilation.js:123:12
+
+  - Compilation.js:147
+    [PlanningPoker]/[webpack]/lib/Compilation.js:147:10
+
+  - NormalModule.js:220 setError
+    [PlanningPoker]/[webpack]/lib/NormalModule.js:220:3
+
+  - NormalModule.js:184
+    [PlanningPoker]/[webpack]/lib/NormalModule.js:184:18
+
+  - NormalModule.js:143
+    [PlanningPoker]/[webpack]/lib/NormalModule.js:143:11
+
+  - LoaderRunner.js:359
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:359:11
+
+  - LoaderRunner.js:195
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:195:19
+
+  - CachedInputFileSystem.js:53 Storage.provide
+    [PlanningPoker]/[enhanced-resolve]/lib/CachedInputFileSystem.js:53:20
+
+  - CachedInputFileSystem.js:160 CachedInputFileSystem.readFile
+    [PlanningPoker]/[enhanced-resolve]/lib/CachedInputFileSystem.js:160:24
+
+  - LoaderRunner.js:194 processResource
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:194:11
+
+  - LoaderRunner.js:153 iteratePitchingLoaders
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:153:10
+
+  - LoaderRunner.js:160 iteratePitchingLoaders
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:160:10
+
+  - LoaderRunner.js:168
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:168:18
+
+  - loadLoader.js:36 loadLoader
+    [PlanningPoker]/[loader-runner]/lib/loadLoader.js:36:3
+
+  - LoaderRunner.js:164 iteratePitchingLoaders
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:164:2
+
+  - LoaderRunner.js:160 iteratePitchingLoaders
+    [PlanningPoker]/[loader-runner]/lib/LoaderRunner.js:160:10
+
+
+Child html-webpack-plugin for "index.html":
+         Asset     Size  Chunks       Chunk Names
+    index.html  2.65 kB       0
+
+    ERROR in ./~/html-webpack-plugin/lib/loader.js!./src/index.html
+    Module build failed: Error: ENOENT: no such file or directory, open 'C:\Users\jkane\Documents\GitHub\PlanningPoker\src\index.html'
+        at Error (native)
