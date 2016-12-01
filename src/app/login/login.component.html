@@ -5,12 +5,13 @@
     </h1>
     <div>
       <label>Name: </label>
-      <input [(ngModel)]="player.name" placeholder="Name"/>
+      <input [(ngModel)]="player.name" placeholder="Name" initialize-property ng-trim="false" />
+      <!--<input []="Player.name" placeholder="Name"/>-->
       <br />
     </div>
     <div>
       <label>Password: </label>
-      <input [(ngModel)]="player.password" placeholder="Password"/>
+      <input [(ngModel)]="player.password" placeholder="Password" initialize-property ng-trim="false" />
     </div>
     <button (click)="onLoginSubmit()">Submit</button>
     <button (click)="onCancel()">Cancel</button>
@@ -23,7 +24,7 @@
     </h1>
     <div>
       <label>Name: </label>
-      <input [(ngModel)]="player.name" placeholder="Name"/>
+      <input [(ngModel)]="player.name" placeholder="Name" initialize-property ng-trim="false" />
       <br />
       <label>Password: </label>
       <input [(ngModel)]="player.password" placeholder="Password"/>

@@ -8,6 +8,8 @@ export default class Player {
   company: string;
   location: string;
 
+
+
   constructor(name: string,
               password: string,
               state: string,
