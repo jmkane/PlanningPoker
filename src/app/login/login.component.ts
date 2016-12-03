@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
-import PlayerService from "../shared/player.service";
+import { Http } from '@angular/http';
 import Player from "../shared/player";
+const PLAYER_URL = 'https://localhost:27017';
 
 @Component({
   selector: 'app-login',
@@ -11,20 +12,22 @@ import Player from "../shared/player";
 export class LoginComponent implements OnInit {
 
   @Input()
-  selectedPlayer: any;
   player: any;
 
-  constructor(public playerService: PlayerService) { }
+  constructor(public http: Http) {
 
+  }
 
     ngOnInit(){
+    this.player = {};
     }
 
     onRegisterUpdate(player:Player)
     {
-      return this.playerService.addPlayer(JSON.parse(JSON.stringify(player)))
+      return this.http.post(PLAYER_URL, JSON.parse(JSON.stringify(player)))
+        .toPromise()
         .then(response => {
-          // return response.json()
+          return response.json()
         })
     }
 
@@ -32,13 +35,19 @@ export class LoginComponent implements OnInit {
       this.player = null;
     }
 
-    onLoginSubmit(player: any):void {
-      this.selectedPlayer = player;
-      this.playerService.getPlayer(player);
-     }
+    onLoginSubmit(player) {
+      return this.http.get(PLAYER_URL)
+        .toPromise()
+        .then(response => {
+          return response.json()
+        }
+     },
 
-    onLogin4GotPWord(player):void {
-      this.playerService.updatePlayer(this.player, this.player._id)
-      .then(() => this.player = null);
-    }
+    onLogin4GotPWord(player) {
+        return this.http.put(PLAYER_URL + '/' + player, player)
+          .toPromise()
+          .then(response => {
+            return response.json()
+          }
+    },
 }

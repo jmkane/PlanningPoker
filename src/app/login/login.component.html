@@ -13,9 +13,9 @@
       <label>Password: </label>
       <input [(ngModel)]="player.password" placeholder="Password" initialize-property ng-trim="false" />
     </div>
-    <button (click)="onLoginSubmit()">Submit</button>
+    <button (click)="onLoginSubmit(player.name,player.password)">Submit</button>
     <button (click)="onCancel()">Cancel</button>
-    <button (click)="onLogin4GotPWord()">Forgot Password</button>
+    <button (click)="onLogin4GotPWord(player.name)">Forgot Password</button>
 
   </div>
   <div class="right">
@@ -42,7 +42,7 @@
       <input [(ngModel)]="player.location" placeholder="Location"/>
       <br />
     </div>
-    <button (click)="onRegisterUpdate()">Save</button>
+    <button (click)="onRegisterUpdate(player)">Save</button>
     <button (click)="onCancel()">Cancel</button>
 
   </div>
