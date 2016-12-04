@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
 import { Http } from '@angular/http';
 import Player from "../shared/player";
-const PLAYER_URL = 'https://localhost:27017';
+const PLAYER_URL = 'http://localhost:27017';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.player = {};
     }
 
-    onRegisterUpdate(player:Player)
+    onRegisterUpdate(player: Player)
     {
       return this.http.post(PLAYER_URL, JSON.parse(JSON.stringify(player)))
         .toPromise()
@@ -35,19 +35,19 @@ export class LoginComponent implements OnInit {
       this.player = null;
     }
 
-    onLoginSubmit(player) {
-      return this.http.get(PLAYER_URL)
+    onLoginSubmit(name,password) {
+      return this.http.get(PLAYER_URL ,name,password)
         .toPromise()
         .then(response => {
           return response.json()
-        }
-     },
+        })
+     }
 
     onLogin4GotPWord(player) {
         return this.http.put(PLAYER_URL + '/' + player, player)
           .toPromise()
           .then(response => {
             return response.json()
-          }
-    },
+          })
+    }
 }
