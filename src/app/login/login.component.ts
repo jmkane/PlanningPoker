@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
 import { Http } from '@angular/http';
 import Player from "../shared/player";
-const PLAYER_URL = 'http://localhost:27017';
+const PLAYER_URL = 'http://localhost:3000/';
 
 @Component({
   selector: 'app-login',
@@ -32,11 +32,11 @@ export class LoginComponent implements OnInit {
     }
 
     onCancel():void {
-      this.player = null;
+      this.player = "     ";
     }
 
     onLoginSubmit(name,password) {
-      return this.http.post(PLAYER_URL ,name,password)
+      return this.http.post(PLAYER_URL ,JSON.parse(JSON.stringify(name)),JSON.parse(JSON.stringify(password)))
         .toPromise()
         .then(response => {
           return response.json()
