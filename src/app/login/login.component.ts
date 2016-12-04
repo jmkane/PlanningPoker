@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     }
 
     onLoginSubmit(name,password) {
-      return this.http.get(PLAYER_URL ,name,password)
+      return this.http.post(PLAYER_URL ,name,password)
         .toPromise()
         .then(response => {
           return response.json()
