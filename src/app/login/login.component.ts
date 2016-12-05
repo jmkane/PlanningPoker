@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
 
     onRegisterUpdate(player: Player)
     {
+      console.log(player);
       return this.http.post(PLAYER_URL, JSON.parse(JSON.stringify(player)))
         .toPromise()
         .then(response => {
@@ -36,7 +37,7 @@ export class LoginComponent implements OnInit {
     }
 
     onLoginSubmit(name,password) {
-      return this.http.post(PLAYER_URL ,JSON.parse(JSON.stringify(name)),JSON.parse(JSON.stringify(password)))
+      return this.http.post(PLAYER_URL + '/login' ,JSON.parse(JSON.stringify(name)),JSON.parse(JSON.stringify(password)))
         .toPromise()
         .then(response => {
           return response.json()
