@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/toPromise';
-const ADD = require('../../addPlayer');
-const GET = require('../../getPlayer');
-const UPDATE = require('../../updatePlayer');
+// const ADD = require('../../addPlayer');
+// const GET = require('../../getPlayer');
+// const UPDATE = require('../../updatePlayer');
 
 import Player from './player';
 
