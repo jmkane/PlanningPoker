@@ -44,8 +44,9 @@ export class LoginComponent implements OnInit {
       return this.http.post(PLAYER_URL + 'login' ,{}, {headers: headers})
         .toPromise()
         .then(response => {
-          return response.json()
+          this.player =  response.json()
         })
+
      }
 
     onLogin4GotPWord(player) {

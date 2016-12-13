@@ -12,9 +12,15 @@
       <label>Password: </label>
       <input [(ngModel)]="player.password" placeholder="Password" initialize-property ng-trim="false" />
     </div>
-    <button (click)="onLoginSubmit()">Submit</button>
     <button (click)="onCancel()">Cancel</button>
+    <div *ngIf = "!player">
+
+    </div>
+    <div *ngIf = "player">
+    <button (click)="onLoginSubmit()">Submit</button>
     <button (click)="onLogin4GotPWord(player.name)">Forgot Password</button>
+    <app-player></app-player>
+    </div>
 
   </div>
   <div class="right">
