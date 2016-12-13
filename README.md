@@ -29,3 +29,8 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Application Usage
+Create local Mongo database with the following form:
+Name, Password, State, Country, Company, Location
+The location refers to the location within the company.
+The program currently will run on localhost on ports 4200 and 3000.
