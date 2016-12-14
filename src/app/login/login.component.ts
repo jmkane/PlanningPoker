@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     }
 
     onCancel():void {
-      this.player = null;
+      this.player = '     ';
     }
 
     onLoginSubmit() {

@@ -1,7 +1,5 @@
 import 'rxjs/add/operator/toPromise';
-// const ADD = require('../../addPlayer');
-// const GET = require('../../getPlayer');
-// const UPDATE = require('../../updatePlayer');
+
 
 import Player from './player';
 
@@ -26,16 +24,4 @@ export default class PlayerService {
       return resolve(player);
     });
   }
-
-
-  //
-  // GET(player) {
-  // };
-  //
-  // UPDATE(player, _id) {
-  // };
-  //
-  // ADD(player: Player) {
-  // };
-
 }
