@@ -3,9 +3,10 @@
   width: 150vw;
   margin: 0;
   padding: 0;
+  background-color: darkgreen;
 }
 .top{
-  height:25%;
+  height:10vh;
   width:15%;
   background-color: white;
 }

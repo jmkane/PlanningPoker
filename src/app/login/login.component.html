@@ -1,26 +1,30 @@
 <div class="container">
+  <h1 style="color:blue;">
+    <!--{{title}}-->
+    Planning Poker
+  </h1>
+  <div *ngIf = "player">
   <div class="left">
     <h1 style="color:white;">
      Login
     </h1>
     <div>
       <label>Name: </label>
-      <input [(ngModel)]="player.name" placeholder="Name" initialize-property ng-trim="false" />
+      <input [(ngModel)]="player.name" placeholder="Name" />
       <br />
     </div>
     <div>
       <label>Password: </label>
-      <input [(ngModel)]="player.password" placeholder="Password" initialize-property ng-trim="false" />
+      <input [(ngModel)]="player.password" placeholder="Password" />
     </div>
     <button (click)="onCancel()">Cancel</button>
-    <button (click)="onLoginSubmit()">Submit</button>
     <button (click)="onLogin4GotPWord(player.name)">Forgot Password</button>
-    <div *ngIf = "player">
+    <button (click)="onLoginSubmit()">Submit</button>
+    <div *ngIf = "!player">
+      <app-player></app-player>
+    </div>
 
-    </div>
-    <div *ngIf = "!player.name">
-        <app-player>Player</app-player>
-    </div>
+
 
   </div>
   <div class="right">
@@ -29,7 +33,7 @@
     </h1>
     <div>
       <label>Name: </label>
-      <input [(ngModel)]="player.name" placeholder="Name" initialize-property ng-trim="false" />
+      <input [(ngModel)]="player.name" placeholder="Name" />
       <br />
       <label>Password: </label>
       <input [(ngModel)]="player.password" placeholder="Password"/>
@@ -49,7 +53,7 @@
     </div>
     <button (click)="onRegisterUpdate(player)">Save</button>
     <button (click)="onCancel()">Cancel</button>
-
+  </div>
   </div>
 </div>
 

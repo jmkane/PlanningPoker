@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     }
 
     onCancel():void {
-      this.player = "     ";
+      this.player = null;
     }
 
     onLoginSubmit() {
@@ -44,7 +44,8 @@ export class LoginComponent implements OnInit {
       return this.http.post(PLAYER_URL + 'login' ,{}, {headers: headers})
         .toPromise()
         .then(response => {
-          this.player =  response.json()
+          this.player =  response.json();
+          return this.player;
         })
 
      }
