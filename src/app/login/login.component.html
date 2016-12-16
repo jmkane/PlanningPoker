@@ -1,57 +1,57 @@
 <div class="container">
   <h1 style="color:blue;">
-    <!--{{title}}-->
     Planning Poker
   </h1>
-  <div *ngIf = "player">
-  <div class="left">
-    <h1 style="color:white;">
-     Login
-    </h1>
-    <div>
-      <label>Name: </label>
-      <input [(ngModel)]="player.name" placeholder="Name" />
-      <br />
-    </div>
-    <div>
-      <label>Password: </label>
-      <input [(ngModel)]="player.password" placeholder="Password" />
-    </div>
-    <button (click)="onCancel()">Cancel</button>
-    <button (click)="onLogin4GotPWord(player.name)">Forgot Password</button>
-    <button (click)="onLoginSubmit()">Submit</button>
-    <div *ngIf = "!player">
-      <app-player></app-player>
-    </div>
+  <div *ngIf="!user">
+    <div class="left">
+      <h1 style="color:white;">
+        Login
+      </h1>
+      <div>
+        <label>Name: </label>
+        <input [(ngModel)]="player.name" placeholder="Name"/>
+        <br/>
+      </div>
+      <div>
+        <label>Password: </label>
+        <input [(ngModel)]="player.password" placeholder="Password"/>
+      </div>
+      <button (click)="onCancel()">Cancel</button>
+      <button (click)="onLogin4GotPWord(player.name)">Forgot Password</button>
+      <button (click)="onLoginSubmit()">Submit</button>
 
-  </div>
-  <div class="right">
-    <h1 style="color:white;">
-     Register
-    </h1>
-    <div>
-      <label>Name: </label>
-      <input [(ngModel)]="player.name" placeholder="Name" />
-      <br />
-      <label>Password: </label>
-      <input [(ngModel)]="player.password" placeholder="Password"/>
-      <br />
-      <label>State: </label>
-      <input [(ngModel)]="player.state" placeholder="State"/>
-      <br />
-      <label>Country: </label>
-      <input [(ngModel)]="player.country" placeholder="Country"/>
-      <br />
-      <label>Company: </label>
-      <input [(ngModel)]="player.company" placeholder="Company"/>
-      <br />
-      <label>Location: </label>
-      <input [(ngModel)]="player.location" placeholder="Location"/>
-      <br />
     </div>
-    <button (click)="onRegisterUpdate(player)">Save</button>
-    <button (click)="onCancel()">Cancel</button>
+    <div class="right">
+      <h1 style="color:white;">
+        Register
+      </h1>
+      <div>
+        <label>Name: </label>
+        <input [(ngModel)]="player.name" placeholder="Name"/>
+        <br/>
+        <label>Password: </label>
+        <input [(ngModel)]="player.password" placeholder="Password"/>
+        <br/>
+        <label>State: </label>
+        <input [(ngModel)]="player.state" placeholder="State"/>
+        <br/>
+        <label>Country: </label>
+        <input [(ngModel)]="player.country" placeholder="Country"/>
+        <br/>
+        <label>Company: </label>
+        <input [(ngModel)]="player.company" placeholder="Company"/>
+        <br/>
+        <label>Location: </label>
+        <input [(ngModel)]="player.location" placeholder="Location"/>
+        <br/>
+      </div>
+      <button (click)="onRegisterUpdate(player)">Save</button>
+      <button (click)="onCancel()">Cancel</button>
+    </div>
   </div>
+  <div *ngIf="user">
+    <app-player></app-player>
   </div>
+
 </div>
 

@@ -11,8 +11,9 @@ const PLAYER_URL = 'http://localhost:3000/';
 })
 export class LoginComponent implements OnInit {
 
-  @Input()
+  // @Input()
   player: any;
+  user: any;
 
   constructor(public http: Http) {
 
@@ -44,8 +45,9 @@ export class LoginComponent implements OnInit {
       return this.http.post(PLAYER_URL + 'login' ,{}, {headers: headers})
         .toPromise()
         .then(response => {
-          this.player =  response.json();
-          return this.player;
+          this.user =  response.json();
+          console.log('promise',this.user);
+          return this.user;
         })
 
      }
