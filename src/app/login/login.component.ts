@@ -53,7 +53,9 @@ export class LoginComponent implements OnInit {
      }
 
     onLogin4GotPWord(player) {
-        return this.http.put(PLAYER_URL + '/' + player, player)
+        let forgot = new Headers();
+        forgot.append("Content-Type", "application/x-www-form-urlencoded");
+        return this.http.get(PLAYER_URL + '/' + player, player)
           .toPromise()
           .then(response => {
             return response.json()
